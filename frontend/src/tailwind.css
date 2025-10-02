@@ -1,0 +1,65 @@
+
+@tailwind base;
+
+@tailwind components;
+@tailwind utilities;
+
+/* Add this animation for the weapon tracers */
+@keyframes fly {
+  from {
+    transform: translate(var(--start-x), var(--start-y));
+    opacity: 1;
+  }
+  to {
+    transform: translate(var(--end-x), var(--end-y));
+    opacity: 0;
+  }
+}
+
+/* This will make the projectile fade away smoothly */
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* This keyframe is no longer used by the new Tracer, but we can leave it for now */
+@keyframes fly {
+  from {
+    transform: translate(var(--start-x), var(--start-y));
+  }
+  to {
+    transform: translate(var(--end-x), var(--end-y));
+  }
+}
+
+
+/* ... any other custom styles you have, like @keyframes ... */
+
+
+/* --- ADD THIS NEW CLASS FOR THE GRID BACKGROUND --- */
+.grid-background {
+  /* A very dark blue-gray, slightly lighter than pure black for depth */
+  background-color: #111827; 
+  
+  /* Define the grid lines using repeating gradients */
+  background-image: 
+    /* Vertical lines */
+    repeating-linear-gradient(to right, rgba(128, 128, 128, 0.2) 0, rgba(128, 128, 128, 0.2) 1px, transparent 1px, transparent 50px),
+    /* Horizontal lines */
+    repeating-linear-gradient(to bottom, rgba(128, 128, 128, 0.2) 0, rgba(128, 128, 128, 0.2) 1px, transparent 1px, transparent 50px);
+    
+  /* Set the size of each grid cell */
+  background-size: 50px 50px;
+}
+/* ... (at the end of the file, with other @keyframes) ... */
+
+/* Animation for the communication links */
+@keyframes pulse {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,31 @@
+# ---- Node.js / React ----
+frontend/node_modules/
+frontend/build/
+frontend/coverage/
+frontend/.pnp
+frontend/.pnp.js
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ---- Python / FastAPI ----
+backend/venv/
+backend/.venv/
+__pycache__/
+*.pyc
+
+# ---- Environment Files ----
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ---- System / Editor ----
+.DS_Store
+.vscode/
+.idea/
+
+# ---- Generated Files ----
+simulation_results.csv
+backend/simulation_results.csv

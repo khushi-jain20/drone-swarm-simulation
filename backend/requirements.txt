@@ -1,0 +1,6 @@
+#backend/requirements.txt
+fastapi
+uvicorn[standard]
+numpy
+pydantic
+python-dotenv
